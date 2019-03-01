@@ -35,3 +35,7 @@ if [ -d "$HOME/go" ]; then
     GOPATH="$HOME/go"
 fi
 
+if [ -d "$HOME/Documents/scripts" ]; then
+    SCRIPTS="$HOME/Documents/scripts"
+fi
+

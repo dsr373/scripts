@@ -6,7 +6,6 @@ alias crdir="cd ~/OneDriveUni/Documents/careers"
 alias compdir="cd ~/OneDriveUni/Documents/Computing"
 
 # this starts the onedrive processes or checks if they are working
-alias odstart="killall onedrive || true && bash ~/.config/onedrive/starter && ps -fC onedrive"
 alias odcheck="ps -fC onedrive"
 
 # this will check updates and list available updates
