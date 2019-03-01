@@ -16,12 +16,24 @@ Plugin 'flazz/vim-colorschemes'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" command to edit this file
+command Erc e ~/.vimrc
+" spell checking
+nnoremap <F6> :call ToggleSpell()<CR>
+function ToggleSpell()
+    if &spell
+        setlocal nospell
+    else
+        setlocal spell spelllang=en_gb
+    endif
+endfunction
+
 " some YouCompleteMe keys setup
 let g:ycm_key_list_stop_completion = ['<C-y>', '<Enter>']
 let g:ycm_key_list_select_completion = ['<Down>', '<TAB>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 
-" when searching, remap C-c to go to found, replace and insert mode
+" when searching, remap \r to go to found, replace and insert mode
 nnoremap <leader>r cgn
 
 " Funky clipboard business to set default copy to system clipboard (register
@@ -93,6 +105,7 @@ endfunction
 
 " some visual stuff
 set ww+=<,>		" wrap cursor movement through line numbers and everything
+set nowrap nolinebreak  " make the magic function above do what it's supposed to when initialized
 set ruler               " show the cursor position all the time
 set number		" show line numbers
 set showcmd             " display incomplete commands
@@ -112,6 +125,10 @@ function! AdaptColorscheme()
     highlight SpecialKey ctermbg=none
     highlight VertSplit ctermbg=none
     highlight SignColumn ctermbg=none
+    highlight SpellBad cterm=underline ctermfg=red
+    highlight SpellCap cterm=underline ctermfg=yellow
+    highlight SpellRare cterm=underline ctermfg=green
+    highlight SpellLocal cterm=underline ctermfg=green
 endfunction
 autocmd ColorScheme * call AdaptColorscheme()
 
