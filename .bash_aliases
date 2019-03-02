@@ -18,4 +18,6 @@ alias replasma="killall plasmashell && kstart plasmashell"
 
 # this launches htop with my prefered settings
 alias mytop="htop --delay=50 --sort-key=TIME"
+# launch ranger
+alias rr="ranger ."
 

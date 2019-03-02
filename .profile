@@ -32,10 +32,10 @@ if [ -d "$HOME/go/bin" ]; then
 fi
 
 if [ -d "$HOME/go" ]; then
-    GOPATH="$HOME/go"
+    export GOPATH="$HOME/go"
 fi
 
 if [ -d "$HOME/Documents/scripts" ]; then
-    SCRIPTS="$HOME/Documents/scripts"
+    export SCRIPTS="$HOME/Documents/scripts"
 fi
 
