@@ -11,30 +11,35 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'flazz/vim-colorschemes'
+Plugin 'morhetz/gruvbox'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " command to edit this file
 command Erc e ~/.vimrc
+command Src source ~/.vimrc
 " spell checking
 nnoremap <F6> :call ToggleSpell()<CR>
 function ToggleSpell()
     if &spell
+        echo "Spell check OFF"
         setlocal nospell
     else
+        echo "Spell check ON"
         setlocal spell spelllang=en_gb
     endif
 endfunction
+
+" when searching, remap \r to go to found, replace and insert mode
+nnoremap <leader>r cgn
+nnoremap <leader>s :w<CR>
 
 " some YouCompleteMe keys setup
 let g:ycm_key_list_stop_completion = ['<C-y>', '<Enter>']
 let g:ycm_key_list_select_completion = ['<Down>', '<TAB>']
 let g:ycm_key_list_previous_completion = ['<Up>']
-
-" when searching, remap \r to go to found, replace and insert mode
-nnoremap <leader>r cgn
 
 " Funky clipboard business to set default copy to system clipboard (register
 " +), as opposed to vim internal register "
@@ -102,18 +107,25 @@ function ToggleWrap()
     inoremap <buffer> <silent> <End>  <C-o>g<End>
   endif
 endfunction
+set nowrap nolinebreak  " make the magic function above do what it's supposed to when initialized
+
+" Searching
+set incsearch           " do incremental searching
+set hlsearch            " highlight search results
+set ignorecase smartcase " what to do with case-sensitivity when searching
 
 " some visual stuff
-set ww+=<,>		" wrap cursor movement through line numbers and everything
-set nowrap nolinebreak  " make the magic function above do what it's supposed to when initialized
+set number              " show line numbers
+set ww+=<,>,[,],h,l	    " wrap cursor movement through line numbers and everything
 set ruler               " show the cursor position all the time
-set number		" show line numbers
 set showcmd             " display incomplete commands
-set incsearch           " do incremental searching
-set ignorecase
-set smartcase
-" set indents to 4 spaces
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set cursorline          " highlight current line
+" indents
+set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
+set mouse=a             " make the mouse work like a mouse
+
+" toggle relative numbers
+nnoremap <leader>n :set relativenumber!<CR>
 
 " colorscheme magic to make any theme transparent
 function! AdaptColorscheme()
@@ -133,4 +145,5 @@ endfunction
 autocmd ColorScheme * call AdaptColorscheme()
 
 colorscheme gruvbox
+set background=dark
 
