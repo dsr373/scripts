@@ -1,3 +1,5 @@
+#!/bin/bash
+
 HOME=~
 
 # replaces the files in HOME with (links to) the ones in this folder
