@@ -1,0 +1,3 @@
+dir=~/.config/onedrive
+onedrive --monitor --confdir="$dir/uni" &>> $dir/unilog.txt &
+onedrive --monitor --confdir="$dir/personal" &>> $dir/perslog.txt &
