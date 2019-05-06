@@ -26,12 +26,12 @@ function conditional_restart {
     if (( $N_OD < $N_EXPECTED )); then
         od_restart
         mynotify "OneDrive was restarted"
-        echo "OneDrive was restarted"
+        echo "$DATE -- OneDrive was restarted"
     else
-        mynotify "OneDrive is running fine"
-        echo "OneDrive was running fine"
+        echo "$DATE -- OneDrive was running fine"
     fi
 }
 
+DATE=$(date +"%F_%R:%S")
 conditional_restart
 

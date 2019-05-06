@@ -6,16 +6,25 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
+" Plugin 'Valloric/YouCompleteMe'
+
+" Some autocompletion plugins
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'stamblerre/gocode', {'rtp': 'nvim/'}
+
+" Linting
 if has('nvim')
     Plugin 'w0rp/ale'
 else
     Plugin 'vim-syntastic/syntastic'
 endif
-" Plugin 'flazz/vim-colorschemes'
+
+" Niceness
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+
+" Themes
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -73,7 +82,7 @@ noremap <C-c> y
 noremap <C-v> p
 noremap <C-x> d
 " paste in insert mode
-inoremap <C-v> <Esc>Pa
+inoremap <C-v> <Esc>pa
 
 "Map CTRL+T then: 
 "       down = last tab       up   = first tab        left = previous tab
