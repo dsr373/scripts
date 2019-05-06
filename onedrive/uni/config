@@ -3,4 +3,4 @@ sync_dir = "~/OneDriveUni"
 # Skip files and directories that match this pattern
 skip_file = ".*|~*|*pll*|*pico-python*"
 # Log here
-log_dir = "~/.log/onedrive/uni/"
+log_dir = "/home/dans/.log/onedrive/uni/"
