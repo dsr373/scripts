@@ -1,7 +1,7 @@
 cd ~
 
 sudo apt install python3 python3-pip golang
-sudo apt install zathura pqiv ranger redshift speedcrunch
+sudo apt install zathura pqiv ranger redshift speedcrunch onedrive
 sudo apt install vim neovim
 
 snap install code --classic
