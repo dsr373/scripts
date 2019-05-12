@@ -4,3 +4,5 @@ sync_dir = "~/OneDriveUni"
 skip_file = ".*|~*|*pll*|*pico-python*"
 # Log here
 log_dir = "/home/dans/.log/onedrive/uni/"
+# Monitor interval
+monitor_interval = "120"

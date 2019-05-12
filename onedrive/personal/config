@@ -4,3 +4,5 @@ sync_dir = "~/OneDrivePers"
 skip_file = ".*|~*|*cache*"
 # Log here
 log_dir = "/home/dans/.log/onedrive/personal/"
+# Monitor interval
+monitor_interval = "600"
