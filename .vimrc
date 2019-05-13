@@ -27,6 +27,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 
+" Filetype specific
+Plugin 'lervag/vimtex'
+
 " Themes
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
@@ -140,7 +143,10 @@ set splitbelow
 set splitright
 
 " make ToggleWrap do what it's supposed to
-set nowrap nolinebreak  
+set nowrap nolinebreak
+
+" Scroll before hitting bottom
+set scrolloff=3
 
 " Searching
 set incsearch           " do incremental searching
