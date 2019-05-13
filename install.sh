@@ -9,6 +9,14 @@ snap install skype --classic
 snap install spotify
 snap install mailspring
 
+# set up go env
+source .profile
+mkdir -p ~/go/bin
+mkdir -p ~/go/src
+
+# powerline
+go get -u github.com/justjanne/powerline-go
+
 # chrome
 cd ~/Downloads
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

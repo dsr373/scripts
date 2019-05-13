@@ -122,4 +122,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# powerline setup
+function _update_ps1() {
+    PS1="$($GOPATH/bin/powerline-go\
+    -max-width 40\
+    -colorize-hostname\
+    -path-aliases="~/OneDriveUni/Documents=OD_Uni,~/OneDrivePers=OD_Pers")"
+}
+
+if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+# end powerline
+
 eval $(thefuck --alias)
