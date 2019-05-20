@@ -56,8 +56,15 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+PROMPT_DIRTRIM=3
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\
+[\
+\[\e[01;32m\]\u@\h\
+\[\e[00m\]] \
+\[\e[01;34m\]\w\
+\[\e[00m\] \$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -122,17 +129,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# powerline setup
-function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go\
-    -max-width 40\
-    -colorize-hostname\
-    -path-aliases="~/OneDriveUni/Documents=OD_Uni,~/OneDrivePers=OD_Pers")"
-}
-
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-# end powerline
+export QT_QPA_PLATFORMTHEME=gtk2
 
 eval $(thefuck --alias)
