@@ -9,6 +9,7 @@ sudo apt install python3 python3-pip golang
 sudo apt install vim neovim
 sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc
 # input
+sudo apt install xserver-xorg-input-synaptics
 sudo apt install xdotool libinput-tools ruby
 sudo gem install fusuma
 
