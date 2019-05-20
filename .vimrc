@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Some autocompletion plugins
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plugin 'deoplete-plugins/deoplete-jedi'
 Plugin 'stamblerre/gocode', {'rtp': 'nvim/'}
 " Plugin 'Valloric/YouCompleteMe'
 
@@ -44,6 +45,9 @@ let g:ale_lint_on_text_changed = "normal"
 
 " enable DEOPLETE
 let g:deoplete#enable_at_startup = 1
+
+" python 3 interpreter
+let g:deoplete#sources#jedi#python_path = "python3"
 
 " ===================== END PLUGINS ==========================}}}
 
@@ -91,9 +95,9 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " pair autocompletion
 inoremap {<CR> {<CR>}<Esc>ko<TAB>
-inoremap () ()<left>
+" inoremap () ()<left>
 " inoremap [] []<left>
-inoremap "" ""<left>
+" inoremap "" ""<left>
 " }}}
 
 " SENSIBLE COPY AND PASTE {{{
