@@ -124,10 +124,10 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 " Maps to resize splits
-noremap <C-S-h> <C-w>5<
-noremap <C-S-l> <C-w>5>
-noremap <C-S-k> <C-w>2+
-noremap <C-S-j> <C-w>2-
+noremap <C-M-h> <C-w>5<
+noremap <C-M-l> <C-w>5>
+noremap <C-M-k> <C-w>2+
+noremap <C-M-j> <C-w>2-
 " }}}
 " }}}
 
