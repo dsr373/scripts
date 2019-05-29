@@ -14,7 +14,7 @@ alias upcheck="sudo apt update; printf '\n\n'; apt list --upgradeable"
 alias upgradeall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
 
 # this restarts plasma
-alias replasma="killall plasmashell && kstart plasmashell"
+alias replasma="killall plasmashell && kstart5 plasmashell"
 
 # this launches htop with my prefered settings
 alias mytop="htop --delay=50 --sort-key=TIME"
