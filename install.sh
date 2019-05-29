@@ -1,16 +1,18 @@
 cd ~
 
 # absolutely necessary
-sudo apt install git
+sudo apt install git -y
 # sysadmin
-sudo apt install tlp --install-recommends
+sudo apt install tlp --install-recommends -y
+sudo apt install htop -y
+sudo apt install timeshift -y
 # tools
-sudo apt install python3 python3-pip golang
-sudo apt install vim neovim
-sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc
+sudo apt install python3 python3-pip golang -y
+sudo apt install vim neovim -y
+sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc -y
 # input
-sudo apt install xserver-xorg-input-synaptics
-sudo apt install xdotool libinput-tools ruby
+sudo apt install xserver-xorg-input-synaptics -y
+sudo apt install xdotool libinput-tools ruby -y
 sudo gem install fusuma
 
 sudo snap install code --classic
