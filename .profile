@@ -30,6 +30,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+# include gems to path
+if [ -d "/home/dans/.gem/ruby/2.6.0/bin" ] ; then
+    export PATH="$PATH:/home/dans/.gem/ruby/2.6.0/bin"
+fi
+
 # set PATH to include go binaries
 if [ -d "$HOME/go/bin" ]; then
     export PATH="$PATH:$HOME/go/bin"

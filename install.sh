@@ -9,7 +9,9 @@ sudo apt install timeshift -y
 # tools
 sudo apt install python3 python3-pip golang -y
 sudo apt install vim neovim -y
-sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc -y
+sudo apt install thefuck
+sudo apt install pandoc
+sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc clementine -y
 # input
 sudo apt install xserver-xorg-input-synaptics -y
 sudo apt install xdotool libinput-tools ruby -y
@@ -17,7 +19,6 @@ sudo gem install fusuma
 
 sudo snap install code --classic
 sudo snap install skype --classic
-sudo snap install spotify
 sudo snap install mailspring
 
 # set up go env
@@ -26,6 +27,7 @@ mkdir -p ~/go/bin
 mkdir -p ~/go/src
 
 # powerline
+echo "go get powerline..."
 go get -u github.com/justjanne/powerline-go
 
 # chrome

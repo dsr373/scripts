@@ -4,6 +4,7 @@ alias ggo="cd ~/go/src/github.com/dsr373"
 alias gcv="cd ~/OneDrivePers/Documents/CV/"
 alias gcr="cd ~/OneDriveUni/Documents/careers"
 alias gcomp="cd ~/OneDriveUni/Documents/Computing"
+alias gn="cd ~/MEGA/notes"
 
 # this checks if onedrive is working
 alias odcheck="ps -fC onedrive"
@@ -16,14 +17,12 @@ alias upgradeall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
 # this restarts plasma
 alias replasma="killall plasmashell && kstart5 plasmashell"
 
-# this launches htop with my prefered settings
-alias mytop="htop --delay=50 --sort-key=TIME"
 # launch ranger
 alias rr="ranger ."
 # use neovim!
 alias vim="nvim"
 
-# git
+# create git aliases only when you need them
 function galias {
     alias gs="git status"
     alias ga="git add"
