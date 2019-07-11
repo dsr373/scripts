@@ -1,3 +1,8 @@
+# this script is meant to install and configure a number of tools
+# tested on Ubuntu 18.04 and 19.04 with default repositories
+# it assumes that your .profile has the GOPATH variable configured properly,
+# otherwise the `go get` command will fail.
+
 cd ~
 
 # absolutely necessary
@@ -9,13 +14,18 @@ sudo apt install timeshift -y
 # tools
 sudo apt install python3 python3-pip golang -y
 sudo apt install vim neovim -y
-sudo apt install thefuck
-sudo apt install pandoc
+sudo apt install thefuck -y
+sudo apt install pandoc -y
 sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc clementine -y
-# input
+# touchpad drivers
 sudo apt install xserver-xorg-input-synaptics -y
 sudo apt install xdotool libinput-tools ruby -y
 sudo gem install fusuma
+
+# setup vundle and neovim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+mkdir -p ~/.config/nvim
+printf "set runtimepath^=~/.vim runtimepath+=~/.vim/after\nlet &packpath = &runtimepath\nsource ~/.vimrc\n" > ~/.config/nvim/init.vim
 
 sudo snap install code --classic
 sudo snap install skype --classic
@@ -38,3 +48,4 @@ cd ~
 
 # python libs
 sudo pip3 install matplotlib numpy scipy
+sudo pip3 install youtube-dl

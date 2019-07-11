@@ -12,7 +12,12 @@ alias odcheck="ps -fC onedrive"
 # this will check updates and list available updates
 alias upcheck="sudo apt update; printf '\n\n'; apt list --upgradeable"
 # this will update cache and upgrade everything (needs yes)
-alias upgradeall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
+alias upall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
+
+# prime switching
+alias psi="sudo prime-select intel"
+alias psn="sudo prime-select nvidia"
+alias psq="prime-select query"
 
 # this restarts plasma
 alias replasma="killall plasmashell && kstart5 plasmashell"
