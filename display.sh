@@ -1,11 +1,13 @@
 function disp-vert {
     xrandr --output eDP-1 --scale 1x1 --pos 0x2160
     xrandr --output DP-2 --scale 2x2 --pos 0x0
+    xrandr --output eDP-1 --scale 0.9999x0.9999  # Stop flicker
 }
 
 function disp-horiz {
     xrandr --output eDP-1 --scale 1x1 --pos 3840x0
     xrandr --output DP-2 --scale 2x2 --pos 0x0
+    xrandr --output eDP-1 --scale 0.9999x0.9999  # Stop flicker
 }
 
 function disp-one {
