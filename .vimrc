@@ -2,42 +2,36 @@
 
 " ============== PLUGINS ===================== {{{
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
+Plug 'junegunn/vim-plug'
 
 " Some autocompletion plugins
-Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plugin 'deoplete-plugins/deoplete-jedi'
-Plugin 'stamblerre/gocode', {'rtp': 'nvim/'}
-" Plugin 'Valloric/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'stamblerre/gocode', {'rtp': 'nvim/'}
+" Plug 'Valloric/YouCompleteMe'
 
 " Linting
 if has('nvim')
-    Plugin 'w0rp/ale'
+    Plug 'w0rp/ale'
 else
-    Plugin 'vim-syntastic/syntastic'
+    Plug 'vim-syntastic/syntastic'
 endif
 
 " Niceness
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
 
 " Filetype specific
-Plugin 'lervag/vimtex'
+Plug 'lervag/vimtex'
 
 " Themes
-Plugin 'morhetz/gruvbox'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
 
 " enable ALE
 "let g:ale_completion_enabled=1
