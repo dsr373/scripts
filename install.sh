@@ -22,8 +22,7 @@ sudo apt install xserver-xorg-input-synaptics -y
 sudo apt install xdotool libinput-tools ruby -y
 sudo gem install fusuma
 
-# setup vundle and neovim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# setup neovim
 mkdir -p ~/.config/nvim
 printf "set runtimepath^=~/.vim runtimepath+=~/.vim/after\nlet &packpath = &runtimepath\nsource ~/.vimrc\n" > ~/.config/nvim/init.vim
 
