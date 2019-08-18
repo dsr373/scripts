@@ -57,14 +57,16 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 PROMPT_DIRTRIM=3
-
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\
+MY_PS='${debian_chroot:+($debian_chroot)}\
 [\
 \[\e[01;32m\]\u@\h\
 \[\e[00m\]] \
 \[\e[01;34m\]\w\
 \[\e[00m\] \$ '
+
+
+if [ "$color_prompt" = yes ]; then
+    PS1=$MY_PS
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi

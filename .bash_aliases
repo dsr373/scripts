@@ -23,7 +23,7 @@ alias psq="prime-select query"
 alias replasma="killall plasmashell && kstart5 plasmashell"
 
 # launch ranger
-alias rr="ranger ."
+alias rr="ranger"
 # use neovim!
 alias vim="nvim"
 

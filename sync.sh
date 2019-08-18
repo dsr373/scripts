@@ -4,7 +4,7 @@ SCR=$HOME/Documents/scripts
 cd $HOME
 
 # replaces the files in HOME with (links to) the ones in this folder
-for NAME in ".profile" ".bash_aliases" ".bashrc" ".vimrc"; do
+for NAME in ".profile" ".bash_aliases" ".bashrc" ".vimrc" ".tmux.conf"; do
     rm -f $NAME
     echo "Linking $SCR/$NAME to $(pwd)/$NAME"
     ln -s $SCR/$NAME ./$NAME

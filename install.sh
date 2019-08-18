@@ -16,6 +16,7 @@ sudo apt install python3 python3-pip golang -y
 sudo apt install vim neovim -y
 sudo apt install thefuck -y
 sudo apt install pandoc -y
+sudo apt install curl -y
 sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc clementine -y
 # touchpad drivers
 sudo apt install xserver-xorg-input-synaptics -y
