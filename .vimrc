@@ -18,7 +18,7 @@ Plug 'junegunn/vim-plug'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'stamblerre/gocode', {'rtp': 'nvim/'}
-" Plug 'Valloric/YouCompleteMe'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Linting
 if has('nvim')
