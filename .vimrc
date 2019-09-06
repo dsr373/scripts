@@ -92,6 +92,8 @@ nnoremap <leader>d :NERDTreeToggle<CR>
 " completion popup remaps for tab, enter and esc
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
+"inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 "inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
