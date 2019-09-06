@@ -5,9 +5,9 @@ swipe:
     right: 
       command: 'xdotool key ctrl+alt+Left'
     up: 
-      command: 'xdotool key ctrl+alt+Down'
+      command: 'xdotool key super+s'
     down: 
-      command: 'xdotool key ctrl+alt+Up'
+      command: 'xdotool key super+d'
   4:
     left: 
       command: 'xdotool key alt+Left'
