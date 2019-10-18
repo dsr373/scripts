@@ -12,12 +12,14 @@ sudo apt install tlp --install-recommends -y
 sudo apt install htop -y
 sudo apt install timeshift -y
 # tools
+sudo apt install qtpass -y
+sudo apt install chromium-browser -y
 sudo apt install python3 python3-pip golang -y
 sudo apt install vim neovim -y
 sudo apt install thefuck -y
 sudo apt install pandoc -y
 sudo apt install curl -y
-sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc clementine -y
+sudo apt install zathura zathura-djvu pqiv ranger redshift speedcrunch onedrive vlc clementine fonts-firacode -y
 # touchpad drivers
 sudo apt install xserver-xorg-input-synaptics -y
 sudo apt install xdotool libinput-tools ruby -y
@@ -29,16 +31,13 @@ printf "set runtimepath^=~/.vim runtimepath+=~/.vim/after\nlet &packpath = &runt
 
 sudo snap install code --classic
 sudo snap install skype --classic
+sudo snap install discord
 sudo snap install mailspring
 
 # set up go env
 source .profile
 mkdir -p ~/go/bin
 mkdir -p ~/go/src
-
-# powerline
-echo "go get powerline..."
-go get -u github.com/justjanne/powerline-go
 
 # chrome
 cd ~/Downloads
