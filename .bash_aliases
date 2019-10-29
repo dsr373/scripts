@@ -10,20 +10,26 @@ alias gn="cd ~/MEGA/notes"
 alias odcheck="ps -fC onedrive"
 
 # this will check updates and list available updates
-alias upcheck="sudo apt update; printf '\n\n'; apt list --upgradeable"
+#alias upcheck="sudo apt update; printf '\n\n'; apt list --upgradeable"
 # this will update cache and upgrade everything (needs yes)
-alias upall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
+#alias upall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
+# arch shortcut
+alias upall="sudo pacman -Syyu"
 
 # prime switching
-alias psi="sudo prime-select intel"
-alias psn="sudo prime-select nvidia"
-alias psq="prime-select query"
+#alias psi="sudo prime-select intel"
+#alias psn="sudo prime-select nvidia"
+#alias psq="prime-select query"
+
+alias psi="optimus-manager --switch intel"
+alias psn="optimus-manager --switch nvidia"
+alias psq="optimus-manager --print-mode"
 
 # this restarts plasma
 alias replasma="killall plasmashell && kstart5 plasmashell"
 
 # launch ranger
-alias rr="ranger"
+alias rr=". ranger"
 # use neovim!
 alias vim="nvim"
 
