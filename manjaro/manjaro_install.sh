@@ -7,7 +7,7 @@ sudo pacman -S htop powertop timeshift --noconfirm
 # tools
 sudo pacman -S go --noconfirm
 sudo pacman -S vim neovim --noconfirm
-sudo pacman -S zathura zathura-djvu --noconfirm
+sudo pacman -S zathura zathura-pdf-mupdf zathura-djvu --noconfirm
 sudo pacman -S ranger pandoc speedcrunch --noconfirm
 sudo pacman -S vlc --noconfirm
 sudo pacman -S qtpass chromium evolution gnome-keyring --noconfirm
