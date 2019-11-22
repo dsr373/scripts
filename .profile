@@ -48,3 +48,6 @@ if [ -d "$HOME/Documents/scripts" ]; then
     export SCRIPTS="$HOME/Documents/scripts"
 fi
 
+# set TERMCMD
+export TERMCMD=konsole
+
