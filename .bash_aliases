@@ -1,5 +1,6 @@
 # some directory shortcuts
 alias gph="cd ~/OneDriveUni/Documents/Physics"
+alias gpr="cd ~/OneDriveUni/Documents/Proj"
 alias ggo="cd ~/go/src/github.com/dsr373"
 alias gcv="cd ~/OneDrivePers/Documents/CV/"
 alias gcr="cd ~/OneDriveUni/Documents/careers"
@@ -15,6 +16,7 @@ alias odcheck="ps -fC onedrive"
 #alias upall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
 # arch shortcut
 alias upall="sudo pacman -Syyu"
+alias rm-orphans="pacman -Qqtd | sudo pacman -Rns -"
 
 # prime switching
 #alias psi="sudo prime-select intel"
@@ -32,6 +34,9 @@ alias replasma="killall plasmashell && kstart5 plasmashell"
 alias rr=". ranger"
 # use neovim!
 alias vim="nvim"
+
+# command line matlab
+alias mtl="matlab -nodesktop -nosplash"
 
 # create git aliases only when you need them
 function galias {
