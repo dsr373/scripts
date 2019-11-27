@@ -1,3 +1,5 @@
+#!/bin/sh
+
 curr_desktop=$(wmctrl -d | awk '{ if ($2 == "'*'") print $1}')
 num_desk=$(wmctrl -d | wc -l)
 

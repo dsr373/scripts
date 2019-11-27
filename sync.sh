@@ -4,11 +4,15 @@ SCR=$HOME/Documents/scripts
 cd $HOME
 
 # replaces the files in HOME with (links to) the ones in this folder
-for NAME in ".profile" ".bash_aliases" ".bashrc" ".vimrc" ".tmux.conf"; do
-    rm -f $NAME
+for NAME in ".profile" ".bash_aliases" ".vimrc" ".tmux.conf"; do
+    mv $NAME $NAME.bak
     echo "Linking $SCR/$NAME to $(pwd)/$NAME"
     ln -s $SCR/$NAME ./$NAME
 done
+
+# distro specific .bashrc
+mv .bashrc .bashrc.bak
+ln -s $SCR/$1/.bashrc ./.bashrc
 
 # sync the onedrive configs
 OD_DIR=$HOME/.config/onedrive
@@ -29,5 +33,8 @@ FUSUMA_DIR=$HOME/.config/fusuma
 mkdir -p $FUSUMA_DIR
 cd $FUSUMA_DIR
 
-ln -s $SCR/fusuma/gnome.yml ./config.yml
+ln -s $SCR/fusuma/kde.yml ./config.yml
+
+# put desktops into path
+ln -s $SCR/desktops $HOME/.local/bin/desktops
 
