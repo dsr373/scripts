@@ -110,8 +110,8 @@ noremap <C-v> p
 noremap <C-x> d
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
-nnoremap <leader>D "_D
 nnoremap x "_x
+vnoremap x "_x
 " paste in insert mode
 inoremap <C-v> <Esc>pa
 " }}}
