@@ -1,9 +1,9 @@
 swipe:
   3: 
     left: 
-      command: 'xdotool key ctrl+alt+Right'
+        command: 'desktops --next'
     right: 
-      command: 'xdotool key ctrl+alt+Left'
+        command: 'desktops --prev'
     up: 
       command: 'xdotool key ctrl+F9'
     down: 
