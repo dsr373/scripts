@@ -77,7 +77,7 @@ nnoremap <F3> :nohlsearch<CR>
 " spell checking
 nnoremap <F6> :call ToggleSpell()<CR>
 
-" enable line wrapping and keybinds
+" enable line wrapping
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 
 " toggle nerdTree
@@ -108,6 +108,10 @@ inoremap {<CR> {<CR>}<Esc>ko<TAB>
 noremap <C-c> y
 noremap <C-v> p
 noremap <C-x> d
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+nnoremap <leader>D "_D
+nnoremap x "_x
 " paste in insert mode
 inoremap <C-v> <Esc>pa
 " }}}
@@ -178,12 +182,8 @@ set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
 set mouse=a             " make the mouse work like a mouse
 
 " backup of files stuff
-if has("vms")
-  set nobackup          " do not keep a backup file, use versions instead
-else
-  set backupdir-=.
-  set backupdir^=./tmp,~/tmp,/tmp  " keep a backup file in ./tmp
-endif
+set backupdir=~/.tmp//,.
+set directory=~/.tmp//,.
 
 "}}}
 
