@@ -95,8 +95,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f $SCRIPTS/.bash_functions ]; then
-    . $SCRIPTS/.bash_functions
+if [ -f $SCRIPTS/functions ]; then
+    . $SCRIPTS/functions
 fi
 
 alias ll="ls -alh"

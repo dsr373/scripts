@@ -1,0 +1,73 @@
+#!/bin/bash
+# vim:foldmethod=marker
+
+
+# ============ ONEDRIVE ================= {{{
+function odstart {
+    killall onedrive || true
+    bash ~/.config/onedrive/starter
+    ps -fC onedrive
+}
+
+function odsync {
+    onedrive --synchronize --confdir="~/.config/onedrive/personal" &
+    onedrive --synchronize --confdir="~/.config/onedrive/uni" &
+}
+# }}}
+
+# =============== BBSWITCH ================ {{{
+function bboff {
+    sudo tee /proc/acpi/bbswitch <<<OFF
+}
+
+function bbon {
+    sudo tee /proc/acpi/bbswitch <<<ON
+}
+# }}}
+
+function mtl-run {
+    # run file with matlab from command line
+    full_path=$(readlink -f $1)
+    echo "Running matlab on $full_path"
+    matlab -nosplash -nodesktop -r "run('$full_path')"
+}
+
+function bat_pw {
+    # read battery power consumption
+    if [ $# -eq 0 ] ; then
+        bat="BAT0"
+    else
+        bat=$1
+    fi
+    curr=$(cat /sys/class/power_supply/$bat/current_now)
+    volt=$(cat /sys/class/power_supply/$bat/voltage_now)
+    str="scale=2; $curr * $volt / 10^12"
+    watt=$(echo "$str" | bc -l)
+    echo "$watt W"
+}
+
+# =============== MUSIC STUFF ================ {{{
+function ytdl {
+    # Options explanation:
+    # -c = continue interrupted
+    # -i = ignore errors
+    # -w = do not overwrite
+    # -o = set title format
+    # -x = extract audio
+    # -a = read urls from file
+
+    if [ -f $1 ] ; then
+        opt="-a"
+    else
+        opt=""
+    fi
+    youtube-dl -ciwx --audio-format m4a -o '%(title)s.%(ext)s' $opt $1
+    kid3 .
+}
+
+function megamus {
+    # mega the music
+    cp -l $@ ~/MEGA/Music
+}
+# }}}
+

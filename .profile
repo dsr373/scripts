@@ -50,4 +50,5 @@ fi
 
 # set TERMCMD
 export TERMCMD=konsole
+#export QT_QPA_PLATFORMTHEME=qt5ct
 
