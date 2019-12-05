@@ -1,0 +1,9 @@
+#!/bin/bash
+function lock {
+    loginctl lock-session
+}
+
+case "$1" in
+    "lock")
+        lock ;;
+esac
