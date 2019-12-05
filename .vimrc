@@ -72,7 +72,7 @@ nnoremap <leader>n :set relativenumber!<CR>
 nnoremap <leader>r cgn
 " stop highlighting
 nnoremap <leader>h :nohlsearch<CR>
-nnoremap <F3> :nohlsearch<CR> 
+nnoremap <F3> :nohlsearch<CR>
 
 " spell checking
 nnoremap <F6> :call ToggleSpell()<CR>
@@ -81,7 +81,10 @@ nnoremap <F6> :call ToggleSpell()<CR>
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 
 " toggle nerdTree
-nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeToggle<CR>
+
+" make
+nnoremap <leader>m :make<CR>
 
 " AUTO COMPLETION {{{
 " some YouCompleteMe keys setup
@@ -118,12 +121,20 @@ inoremap <C-v> <Esc>pa
 
 " TABS AND SPLITS {{{
 "Map CTRL+T then: 
-"       down = last tab       up   = first tab        left = previous tab
-"       right= next tab       plus = new tab"
-noremap <C-t><up> :tabr<cr>
-noremap <C-t><down> :tabl<cr>
-noremap <C-t><left> :tabp<cr>
-noremap <C-t><right> :tabn<cr>
+"       left = previous tab     right= next tab
+"       plus = new tab"
+" Also <leader>n to tab n
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <C-o> :tabp<cr>
+noremap <C-p> :tabn<cr>
 noremap <C-t>+ :tabnew<cr>
 
 " Move to splits
@@ -131,7 +142,7 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
-" Maps to resize splits
+" Resize splits
 noremap <C-M-h> <C-w>5<
 noremap <C-M-l> <C-w>5>
 noremap <C-M-k> <C-w>2+
