@@ -99,7 +99,8 @@ if [ -f $SCRIPTS/functions ]; then
     . $SCRIPTS/functions
 fi
 
-alias ll="ls -alh"
+alias ll="ls -lh"
+alias la="ls -alh"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB

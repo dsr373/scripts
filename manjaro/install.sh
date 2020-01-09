@@ -5,11 +5,14 @@ sudo pacman -Syu git --noconfirm
 # sysadmin
 sudo pacman -S htop powertop timeshift --noconfirm
 sudo pacman -S tlp --noconfirm
+sudo pacman -S yay --noconfirm
 # tools
 sudo pacman -S go --noconfirm
+sudo pacman -S python-matplotlib python-numpy python-scipy --noconfirm
 sudo pacman -S vim neovim --noconfirm
 sudo pacman -S zathura zathura-pdf-mupdf zathura-djvu --noconfirm
 sudo pacman -S ranger pandoc speedcrunch --noconfirm
+sudo pacman -S youtube-dl --noconfirm
 sudo pacman -S vlc --noconfirm
 sudo pacman -S qtpass chromium gnome-keyring --noconfirm
 sudo pacman -S browserpass browserpass-chromium broswerpass-firefox --noconfirm
@@ -25,10 +28,6 @@ sudo gem install fusuma
 #sudo pacman -S snapd
 # REMEBER TO RUN: sudo systemctl enable --now snapd.socket
 #sudo ln -s /var/lib/snapd/snap /snap
-
-sudo pip3 install matplotlib numpy scipy
-sudo pip3 install youtube-dl
-sudo pip install pynvim
 
 # AUR
 pamac build onedrive-abraunegg
