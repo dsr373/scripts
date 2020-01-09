@@ -20,9 +20,9 @@ if [ $# -eq 1 ] ; then
         "--prev" )
             wmctrl -s $(prev) ;;
         "--wn-next" )
-            wmctrl -r :ACTIVE: -t $(next) ; wmctrl -s $(next) ;;
+            wmctrl -r :ACTIVE: -t $(next) ;;
         "--wn-prev" )
-            wmctrl -r :ACTIVE: -t $(prev) ; wmctrl -s $(prev) ;;
+            wmctrl -r :ACTIVE: -t $(prev) ;;
     esac
 else
     echo "Usage: desktops [--next|--prev]"

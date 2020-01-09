@@ -21,7 +21,7 @@ pinch:
   2:
     in:
       command: 'xdotool key ctrl+plus'
-      threshold: 0.3
+      threshold: 0.2
       interval: 3.0
     out:
       command: 'xdotool key ctrl+minus'
