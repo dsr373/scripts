@@ -22,10 +22,15 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Linting
 if has('nvim')
-    Plug 'w0rp/ale'
+    Plug 'dense-analysis/ale'
 else
     Plug 'vim-syntastic/syntastic'
 endif
+
+" snippets
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 
 " Niceness
 Plug 'scrooloose/nerdtree'
@@ -50,6 +55,15 @@ let g:deoplete#enable_at_startup = 1
 
 " python 3 interpreter
 let g:deoplete#sources#jedi#python_path = "python3"
+
+" Snippets configuration
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-s>"
+let g:UltiSnipsJumpBackwardTrigger="<c-a>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="tabdo"
+
 
 " ===================== END PLUGINS ==========================}}}
 
