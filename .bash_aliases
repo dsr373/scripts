@@ -29,14 +29,16 @@ alias psq="optimus-manager --print-mode"
 
 # this restarts plasma
 alias replasma="killall plasmashell && kstart5 plasmashell"
+# restart pulse in case audio breaks
+alias saund="pulseaudio -k"
 
 # launch ranger
 alias rr=". ranger"
 # use neovim!
 alias vim="nvim"
 
-# command line matlab
-alias mtl="matlab -nodesktop -nosplash"
+# clipboard
+alias clip="xclip -selection c"
 
 # create git aliases only when you need them
 function galias {
