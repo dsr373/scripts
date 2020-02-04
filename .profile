@@ -31,8 +31,8 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # include gems to path
-if [ -d "/home/dans/.gem/ruby/2.6.0/bin" ] ; then
-    export PATH="$PATH:/home/dans/.gem/ruby/2.6.0/bin"
+if [ -d "/home/dans/.gem/ruby/2.7.0/bin" ] ; then
+    export PATH="$PATH:/home/dans/.gem/ruby/2.7.0/bin"
 fi
 
 # set PATH to include go binaries
@@ -45,7 +45,7 @@ if [ -d "$HOME/go" ]; then
 fi
 
 if [ -d "$HOME/Documents/scripts" ]; then
-    export SCRIPTS="$HOME/Documents/scripts"
+    export scripts="$HOME/Documents/scripts"
 fi
 
 # set TERMCMD

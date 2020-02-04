@@ -10,8 +10,8 @@ function odstart {
 }
 
 function odsync {
-    onedrive --synchronize --confdir="~/.config/onedrive/personal" &
-    onedrive --synchronize --confdir="~/.config/onedrive/uni" &
+    $HOME/Documents/scripts/onedrive/sync
+    ps -fC onedrive
 }
 # }}}
 
@@ -24,13 +24,6 @@ function bbon {
     sudo tee /proc/acpi/bbswitch <<<ON
 }
 # }}}
-
-function mtl-run {
-    # run file with matlab from command line
-    full_path=$(readlink -f $1)
-    echo "Running matlab on $full_path"
-    matlab -nosplash -nodesktop -r "run('$full_path')"
-}
 
 function bat_pw {
     # read battery power consumption
@@ -63,11 +56,6 @@ function ytdl {
     fi
     youtube-dl -ciwx --audio-format m4a -o '%(title)s.%(ext)s' $opt $1
     kid3 .
-}
-
-function megamus {
-    # mega the music
-    cp -l $@ ~/MEGA/Music
 }
 # }}}
 
