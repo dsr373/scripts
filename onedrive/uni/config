@@ -5,4 +5,4 @@ skip_file = "~*|.~*|*.tmp|*pll*|*pico-python*"
 # Log here
 log_dir = "/home/dans/.log/onedrive/uni/"
 # Monitor interval
-monitor_interval = "120"
+monitor_interval = "1800"

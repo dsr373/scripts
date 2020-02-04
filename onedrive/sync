@@ -1,0 +1,10 @@
+#!/bin/bash
+
+logdir=$HOME/.log/onedrive
+
+date >> $logdir/personal/log
+date >> $logdir/uni/log
+
+onedrive --synchronize --confdir="$HOME/.config/onedrive/personal" >> $HOME/.log/onedrive/personal/log &
+onedrive --synchronize --confdir="$HOME/.config/onedrive/uni" >> $HOME/.log/onedrive/uni/log &
+
