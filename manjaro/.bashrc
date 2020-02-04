@@ -99,8 +99,8 @@ if [ -f $SCRIPTS/functions ]; then
     . $SCRIPTS/functions
 fi
 
-alias ll="ls -lh"
-alias la="ls -alh"
+alias ll="lsd -lh --group-dirs first"
+alias la="lsd -Alh --group-dirs first"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
@@ -123,6 +123,7 @@ shopt -s expand_aliases
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
+shopt -s histverify
 
 #
 # # ex - archive extractor
@@ -150,3 +151,5 @@ ex ()
 }
 
 export EDITOR=nvim
+
+source /home/dans/.config/broot/launcher/bash/br
