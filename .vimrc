@@ -123,6 +123,7 @@ inoremap {<CR> {<CR>}<Esc>ko<TAB>
 
 " SENSIBLE COPY AND PASTE {{{
 noremap <C-c> y
+noremap <M-v> <C-v>
 noremap <C-v> p
 noremap <C-x> d
 nnoremap <leader>d "_d
