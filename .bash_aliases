@@ -28,7 +28,8 @@ alias psn="optimus-manager --switch nvidia"
 alias psq="optimus-manager --print-mode"
 
 # this restarts plasma
-alias replasma="killall plasmashell && kstart5 plasmashell"
+alias replasma="plasmashell --replace &"
+alias rekwin="kwin_x11 --replace &"
 # restart pulse in case audio breaks
 alias saund="pulseaudio -k"
 
