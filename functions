@@ -39,6 +39,19 @@ function bat_pw {
     echo "$watt W"
 }
 
+# add ssh identity to ssh-agent for seamless push/pull
+function addsshkey {
+    # if ssh-agent not running, start it
+    if [[ -z $(pgrep ssh-agent) ]] ; then
+        echo "Starting ssh agent"
+        eval $(ssh-agent)
+    else
+        echo "ssh agent running"
+    fi
+
+    ssh-add ~/.ssh/id_rsa
+}
+
 # =============== MUSIC STUFF ================ {{{
 function ytdl {
     # Options explanation:
