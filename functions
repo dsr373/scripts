@@ -42,7 +42,8 @@ function bat_pw {
 # add ssh identity to ssh-agent for seamless push/pull
 function addsshkey {
     # if ssh-agent not running, start it
-    if [[ -z $(pgrep ssh-agent) ]] ; then
+    ssh-add -l &>/dev/null
+    if [ "$?" == 2 ]; then
         echo "Starting ssh agent"
         eval $(ssh-agent)
     else

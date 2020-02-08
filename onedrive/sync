@@ -2,9 +2,9 @@
 
 logdir=$HOME/.log/onedrive
 
-date >> $logdir/personal/log
-date >> $logdir/uni/log
+printf "\n$(date)\n" >> $logdir/personal/log
+printf "\n$(date)\n" >> $logdir/uni/log
 
-onedrive --synchronize --confdir="$HOME/.config/onedrive/personal" >> $HOME/.log/onedrive/personal/log &
-onedrive --synchronize --confdir="$HOME/.config/onedrive/uni" >> $HOME/.log/onedrive/uni/log &
+onedrive --synchronize --confdir="$HOME/.config/onedrive/personal" >> $logdir/personal/log &
+onedrive --synchronize --confdir="$HOME/.config/onedrive/uni" >> $logdir/uni/log &
 

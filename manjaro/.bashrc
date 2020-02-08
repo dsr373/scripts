@@ -95,8 +95,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f $SCRIPTS/functions ]; then
-    . $SCRIPTS/functions
+if [ -f $scripts/functions ]; then
+    . $scripts/functions
 fi
 
 alias ll="lsd -lh --group-dirs first"
