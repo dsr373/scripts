@@ -17,7 +17,7 @@ Plug 'junegunn/vim-plug'
 " Some autocompletion plugins
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'stamblerre/gocode', {'rtp': 'nvim/'}
+" Plug 'stamblerre/gocode', {'rtp': 'nvim/'}
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Linting
@@ -64,6 +64,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-a>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="tabdo"
 
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
 
 " ===================== END PLUGINS ==========================}}}
 
@@ -74,7 +77,7 @@ command! Src source ~/.vimrc
 " ============== KEYBINDS ==================== {{{
 
 " go from insert to visual mode with Ctrl-Space
-inoremap <C-Space> <Esc>viw
+"inoremap <C-Space> <Esc>viw
 
 " save on \s
 nnoremap <leader>s :w<CR>
@@ -100,6 +103,9 @@ nnoremap <leader>f :NERDTreeToggle<CR>
 " make
 nnoremap <leader>m :make<CR>
 
+" trim all whitespace
+nnoremap <leader>t :call TrimWhitespace()<CR>
+
 " AUTO COMPLETION {{{
 " some YouCompleteMe keys setup
 "let g:ycm_key_list_stop_completion = ['<C-y>', '<Enter>']
@@ -109,23 +115,18 @@ nnoremap <leader>m :make<CR>
 " completion popup remaps for tab, enter and esc
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
-"inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-"inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
 " pair autocompletion
 inoremap {<CR> {<CR>}<Esc>ko<TAB>
-" inoremap () ()<left>
-" inoremap [] []<left>
-" inoremap "" ""<left>
 " }}}
 
 " SENSIBLE COPY AND PASTE {{{
-noremap <C-c> y
+"noremap <C-c> y
 noremap <M-v> <C-v>
-noremap <C-v> p
-noremap <C-x> d
+"noremap <C-v> p
+"noremap <C-x> d
+
+" x just deletes, no clipboard, while d cuts to clipboard
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 nnoremap x "_x
@@ -135,7 +136,7 @@ inoremap <C-v> <Esc>pa
 " }}}
 
 " TABS AND SPLITS {{{
-"Map CTRL+T then: 
+"Map CTRL+T then:
 "       left = previous tab     right= next tab
 "       plus = new tab"
 " Also <leader>n to tab n
@@ -157,11 +158,19 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+
+noremap <M-Left> <C-w>h
+noremap <M-Down> <C-w>j
+noremap <M-Up> <C-w>k
+noremap <M-Right> <C-w>l
 " Resize splits
-noremap <C-M-h> <C-w>5<
-noremap <C-M-l> <C-w>5>
-noremap <C-M-k> <C-w>2+
-noremap <C-M-j> <C-w>2-
+noremap <M-h> <C-w>5<
+noremap <M-l> <C-w>5>
+noremap <M-k> <C-w>2+
+noremap <M-j> <C-w>2-
+
+noremap <M-,> <C-w>5<
+noremap <M-.> <C-w>5>
 " }}}
 " }}}
 
@@ -254,6 +263,13 @@ function! ToggleWrap()      "{{{
     endif
 endfunction
 " }}}
+
+function! TrimWhitespace()           "{{{
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+" }}}
 " }}}
 
 
@@ -271,7 +287,7 @@ function! AdaptColorscheme()
     highlight SpellBad cterm=underline ctermfg=red
     highlight SpellCap cterm=underline ctermfg=yellow
     highlight SpellRare cterm=underline ctermfg=green
-    highlight SpellLocal cterm=underline ctermfg=green
+    highlight SpellLocal cterm=underline ctermfg=blue
 endfunction
 augroup color_adapt
     autocmd!
