@@ -1,0 +1,2 @@
+kdocker -q -i /home/dans/.icons/Papirus-Dark/22x22/apps/evolution.svg evolution &
+

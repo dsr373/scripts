@@ -37,4 +37,5 @@ ln -s $SCR/fusuma/kde.yml ./config.yml
 
 # put desktops into path
 ln -s $SCR/desktops $HOME/.local/bin/desktops
+ln -s $SCR/dockevolution $HOME/.local/bin/dockevolution
 

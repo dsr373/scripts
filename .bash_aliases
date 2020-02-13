@@ -5,7 +5,7 @@ alias ggo="cd ~/go/src/github.com/dsr373"
 alias gcv="cd ~/OneDrivePers/Documents/CV/"
 alias gcr="cd ~/OneDriveUni/Documents/careers"
 alias gcomp="cd ~/OneDriveUni/Documents/Computing"
-alias gn="cd ~/MEGA/notes"
+alias gn="cd ~/Documents/notes; source cmds"
 
 # this checks if onedrive is working
 alias odcheck="ps -fC onedrive"

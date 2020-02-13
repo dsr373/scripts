@@ -16,16 +16,13 @@ Plug 'junegunn/vim-plug'
 
 " Some autocompletion plugins
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
+" Plug 'deoplete-plugins/deoplete-jedi'
 " Plug 'stamblerre/gocode', {'rtp': 'nvim/'}
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 
 " Linting
-if has('nvim')
-    Plug 'dense-analysis/ale'
-else
-    Plug 'vim-syntastic/syntastic'
-endif
+" Plug 'dense-analysis/ale'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -46,6 +43,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+" configure language server completion
+let g:LanguageClient_serverCommands = {
+    \ 'python': ['/usr/bin/pyls'],
+    \ 'tex': ['/usr/bin/texlab'],
+    \ 'c': ['/usr/bin/clangd'],
+    \ 'cpp': ['/usr/bin/clangd'],
+    \ }
+
 " enable ALE
 "let g:ale_completion_enabled=1
 let g:ale_lint_on_text_changed = "normal"
@@ -54,7 +59,7 @@ let g:ale_lint_on_text_changed = "normal"
 let g:deoplete#enable_at_startup = 1
 
 " python 3 interpreter
-let g:deoplete#sources#jedi#python_path = "python3"
+" let g:deoplete#sources#jedi#python_path = "python3"
 
 " Snippets configuration
 let g:UltiSnipsExpandTrigger="<c-s>"
@@ -107,11 +112,6 @@ nnoremap <leader>m :make<CR>
 nnoremap <leader>t :call TrimWhitespace()<CR>
 
 " AUTO COMPLETION {{{
-" some YouCompleteMe keys setup
-"let g:ycm_key_list_stop_completion = ['<C-y>', '<Enter>']
-"let g:ycm_key_list_select_completion = ['<Down>', '<j>', '<TAB>']
-"let g:ycm_key_list_previous_completion = ['<Up>', '<k>']
-
 " completion popup remaps for tab, enter and esc
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -121,10 +121,10 @@ inoremap {<CR> {<CR>}<Esc>ko<TAB>
 " }}}
 
 " SENSIBLE COPY AND PASTE {{{
-"noremap <C-c> y
+noremap <C-c> y
 noremap <M-v> <C-v>
-"noremap <C-v> p
-"noremap <C-x> d
+noremap <C-v> p
+noremap <C-x> d
 
 " x just deletes, no clipboard, while d cuts to clipboard
 nnoremap <leader>d "_d
