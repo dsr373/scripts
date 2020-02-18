@@ -153,3 +153,4 @@ ex ()
 export EDITOR=nvim
 
 source /home/dans/.config/broot/launcher/bash/br
+eval "$(thefuck --alias)"
