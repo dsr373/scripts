@@ -25,7 +25,7 @@ alias rm-orphans="pacman -Qqtd | sudo pacman -Rns -"
 
 alias psi="optimus-manager --switch intel"
 alias psn="optimus-manager --switch nvidia"
-alias psq="optimus-manager --print-mode"
+alias psq="optimus-manager --status"
 
 # this restarts plasma
 alias replasma="plasmashell --replace &"
