@@ -277,17 +277,21 @@ endfun
 " colorscheme magic to make any theme transparent
 function! AdaptColorscheme()
     highlight clear CursorLine
-    highlight Normal ctermbg=none
-    highlight LineNr ctermbg=none
-    highlight Folded ctermbg=none
-    highlight NonText ctermbg=none
-    highlight SpecialKey ctermbg=none
-    highlight VertSplit ctermbg=none
-    highlight SignColumn ctermbg=none
-    highlight SpellBad cterm=underline ctermfg=red
-    highlight SpellCap cterm=underline ctermfg=yellow
-    highlight SpellRare cterm=underline ctermfg=green
-    highlight SpellLocal cterm=underline ctermfg=blue
+    " highlight Normal ctermbg=none
+    " highlight LineNr ctermbg=none
+    " highlight Folded ctermbg=none
+    " highlight NonText ctermbg=none
+    " highlight SpecialKey ctermbg=none
+    " highlight VertSplit ctermbg=none
+    " highlight SignColumn ctermbg=none
+    highlight SpellBad cterm=underline,bold
+    highlight SpellCap cterm=underline,bold
+    highlight SpellRare cterm=underline,bold
+    highlight SpellLocal cterm=underline,bold
+    " highlight SpellBad ctermbg=red
+    " highlight SpellCap ctermbg=blue
+    " highlight SpellRare ctermbg=brown
+    " highlight SpellLocal ctermbg=brown
 endfunction
 augroup color_adapt
     autocmd!

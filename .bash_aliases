@@ -5,27 +5,27 @@ alias ggo="cd ~/go/src/github.com/dsr373"
 alias gcv="cd ~/OneDrivePers/Documents/CV/"
 alias gcr="cd ~/OneDriveUni/Documents/careers"
 alias gcomp="cd ~/OneDriveUni/Documents/Computing"
-alias gn="cd ~/Documents/notes; source cmds"
+alias gn="cd ~/Nextcloud/notes; source .cmds"
 
 # this checks if onedrive is working
 alias odcheck="ps -fC onedrive"
 
 # this will check updates and list available updates
-#alias upcheck="sudo apt update; printf '\n\n'; apt list --upgradeable"
+alias upcheck="sudo apt update; printf '\n\n'; apt list --upgradeable"
 # this will update cache and upgrade everything (needs yes)
-#alias upall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
+alias upall="sudo apt update; printf '\n\n'; sudo apt dist-upgrade"
 # arch shortcut
-alias upall="sudo pacman -Syyu"
-alias rm-orphans="pacman -Qqtd | sudo pacman -Rns -"
+# alias upall="sudo pacman -Syyu"
+# alias rm-orphans="pacman -Qqtd | sudo pacman -Rns -"
 
 # prime switching
-#alias psi="sudo prime-select intel"
-#alias psn="sudo prime-select nvidia"
-#alias psq="prime-select query"
+alias psi="sudo prime-select intel"
+alias psn="sudo prime-select nvidia"
+alias psq="prime-select query"
 
-alias psi="optimus-manager --switch intel"
-alias psn="optimus-manager --switch nvidia"
-alias psq="optimus-manager --status"
+# alias psi="optimus-manager --switch intel"
+# alias psn="optimus-manager --switch nvidia"
+# alias psq="optimus-manager --status"
 
 # this restarts plasma
 alias replasma="plasmashell --replace &"

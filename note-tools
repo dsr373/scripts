@@ -3,6 +3,15 @@
 reader=okular
 editor=nvim
 
+function arch {
+    if [[ ! -f $1.md ]]; then
+        echo "File does not exist: $1.md"
+        return 1
+    fi
+
+    mv $1.* ./.archive
+}
+
 function view {
     if [[ ! -f $1.pdf ]]; then
         echo "File does not exist: $1.pdf"
@@ -19,8 +28,13 @@ function new {
         return 1
     fi
 
-    cp template.md $1.md
-    $editor $1.md
+    tmp=./.templates/template.md
+    if [[ ! -z "$2" ]]; then
+        tmp=./.templates/$2.md
+    fi
+
+    cp $tmp $1.md
+    edit $1
 }
 
 function edit {

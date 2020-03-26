@@ -1,0 +1,4 @@
+#!/bin/bash
+
+kdocker -q -i /home/dans/.icons/Papirus-Dark/22x22/apps/thunderbird.svg thunderbird >> /home/dans/.log/thunderbird &
+

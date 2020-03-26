@@ -99,8 +99,8 @@ if [ -f $scripts/functions ]; then
     . $scripts/functions
 fi
 
-alias ll="lsd -lh --group-dirs first"
-alias la="lsd -Alh --group-dirs first"
+alias ll="ls -lh --group-directories-first"
+alias la="ls -Alh --group-directories-first"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
