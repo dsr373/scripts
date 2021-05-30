@@ -1,5 +1,7 @@
 " vim:foldmethod=marker
 
+language en_GB.utf8       " sets the language of the messages / ui (vim)
+
 " ============== PLUGINS ===================== {{{
 set nocompatible              " be iMproved, required
 

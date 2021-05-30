@@ -31,8 +31,9 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # include gems to path
-if [ -d "/home/dans/.gem/ruby/2.7.0/bin" ] ; then
-    export PATH="$PATH:/home/dans/.gem/ruby/2.7.0/bin"
+gempath="/home/dans/.gem/ruby/2.7.0/bin"
+if [ -d "$gempath" ] ; then
+    export PATH="$PATH:$gempath"
 fi
 
 # set PATH to include go binaries
@@ -50,5 +51,6 @@ fi
 
 # set TERMCMD
 export TERMCMD=konsole
-#export QT_QPA_PLATFORMTHEME=qt5ct
 
+# set qt5 theme under something not KDE
+# export QT_STYLE_OVERRIDE=kvantum
