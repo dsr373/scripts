@@ -53,6 +53,30 @@ function addsshkey {
     ssh-add ~/.ssh/id_rsa
 }
 
+function date_cmd {
+    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        echo "date"
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        echo "gdate"
+    fi
+}
+
+# convert millisecond timestamp into real date
+function ts2date {
+    ts=$1
+    if (( $ts > 9999999999 )) ; then
+        ts=$( echo "($ts + 500) / 1000" | bc )
+    fi
+
+    $(date_cmd) -d @$ts
+}
+
+# convert date and time to epoch timestamp
+function date2ts {
+    echo "$1"
+    $(date_cmd) --date="$1" +"%s"
+}
+
 # =============== MUSIC STUFF ================ {{{
 function ytdl {
     # Options explanation:
