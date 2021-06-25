@@ -1,4 +1,4 @@
 #!/bin/bash
 
-kdocker -q -i /home/dans/.icons/Papirus-Dark/22x22/apps/evolution.svg evolution >> /home/dans/.log/evolution &
+kdocker -q -i /usr/share/icons/Papirus-Dark/22x22/apps/evolution.svg evolution >> /home/dans/.log/evolution &
 

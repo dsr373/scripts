@@ -20,23 +20,23 @@ swipe:
 pinch:
   2:
     in:
-      command: 'xdotool key ctrl+plus'
+      command: 'xdotool keydown ctrl click 4 keyup ctrl'
     out:
-      command: 'xdotool key ctrl+minus'
+      command: 'xdotool keydown ctrl click 5 keyup ctrl'
   3:
-    out:
+    in:
       command: 'xdotool key super+d'
       interval: 2.0
       threshold: 0.5
-    in:
+    out:
       command: 'xdotool key super+s'
       interval: 2.0
       threshold: 0.5
 
 threshold:
   swipe: 0.4
-  pinch: 0.5
+  pinch: 0.3
 
 interval:
   swipe: 0.6
-  pinch: 1.5
+  pinch: 1.3
