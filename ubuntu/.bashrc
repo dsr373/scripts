@@ -45,6 +45,10 @@ esac
 # should be on the output of commands, not on the prompt
 #force_color_prompt=yes
 
+function gitbranch_ps1 {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
@@ -62,6 +66,7 @@ MY_PS='${debian_chroot:+($debian_chroot)}\
 \[\e[01;32m\]\u@\h\
 \[\e[00m\]] \
 \[\e[01;34m\]\w\
+\[\e[01;35m\]$(gitbranch_ps1)\
 \[\e[00m\] \$ '
 
 
