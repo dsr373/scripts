@@ -62,9 +62,9 @@ fi
 
 PROMPT_DIRTRIM=3
 MY_PS='${debian_chroot:+($debian_chroot)}\
-[\
-\[\e[01;32m\]\u@\h\
-\[\e[00m\]] \
+\e[01;32m\]\u\
+\[\e[00m\]@\
+\[\e[01;33m\]\h \
 \[\e[01;34m\]\w\
 \[\e[01;35m\]$(gitbranch_ps1)\
 \[\e[00m\] \$ '
@@ -138,4 +138,4 @@ fi
 
 export QT_QPA_PLATFORMTHEME=gtk2
 
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
