@@ -73,8 +73,8 @@ function ts2date {
 
 # convert date and time to epoch timestamp
 function date2ts {
-    echo "$1"
-    $(date_cmd) --date="$1" +"%s"
+    ts=$($(date_cmd) --date="$1" +"%s")
+    echo "$ts * 1000" | bc
 }
 
 # =============== MUSIC STUFF ================ {{{

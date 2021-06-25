@@ -15,7 +15,7 @@ call plug#begin()
 Plug 'junegunn/vim-plug'
 
 " Some autocompletion plugins
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'deoplete-plugins/deoplete-jedi'
 " Plug 'stamblerre/gocode', {'rtp': 'nvim/'}
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
@@ -25,9 +25,9 @@ Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.s
 " Plug 'dense-analysis/ale'
 
 " snippets
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " Niceness
 Plug 'scrooloose/nerdtree'
@@ -35,7 +35,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 
 " Filetype specific
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 
 " Themes
 Plug 'morhetz/gruvbox'
@@ -46,7 +46,6 @@ call plug#end()
 " configure language server completion
 let g:LanguageClient_serverCommands = {
     \ 'python': ['/usr/bin/pyls'],
-    \ 'tex': ['/usr/bin/texlab'],
     \ 'c': ['/usr/bin/clangd'],
     \ 'cpp': ['/usr/bin/clangd'],
     \ }
@@ -121,10 +120,10 @@ inoremap {<CR> {<CR>}<Esc>ko<TAB>
 " }}}
 
 " SENSIBLE COPY AND PASTE {{{
-noremap <C-c> y
-noremap <M-v> <C-v>
-noremap <C-v> p
-noremap <C-x> d
+" noremap <C-c> y
+" noremap <M-v> <C-v>
+" noremap <C-v> p
+" noremap <C-x> d
 
 " x just deletes, no clipboard, while d cuts to clipboard
 nnoremap <leader>d "_d
