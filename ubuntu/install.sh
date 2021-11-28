@@ -14,8 +14,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 sudo apt install tlp --install-recommends -y
 sudo apt install htop -y
 # tools
-sudo apt install qtpass webext-browserpass \
-     chromium-browser \
+sudo apt install chromium-browser \
      python3 python3-pip golang \
      vim neovim curl \
      qt5-style-kvantum qt5-style-kvantum-themes \
@@ -23,8 +22,8 @@ sudo apt install qtpass webext-browserpass \
      speedcrunch onedrive rclone vlc clementine fonts-firacode \
      evolution thunderbird pandoc mps-youtube thefuck kdocker -y
 # touchpad drivers
-sudo apt install xserver-xorg-input-synaptics -y
 sudo apt install xdotool libinput-tools ruby -y
+sudo apt install xserver-xorg-input-synaptics -y
 gem install fusuma
 sudo apt install wmctrl -y
 sudo gpasswd -a $USER input
@@ -54,16 +53,13 @@ printf "set runtimepath^=~/.vim runtimepath+=~/.vim/after\nlet &packpath = &runt
 flatpak install flathub com.skype.Client
 # flatpak install flathub org.inkscape.Inkscape
 flatpak install flathub com.discordapp.Discord
-
-# sudo snap install code --classic
-# sudo snap install skype --classic
-# sudo snap install discord
-# sudo snap install mailspring
+flatpak install flathub com.bitwarden.desktop
+flatpak install flathub com.visualstudio.code-oss
 
 # set up go env
-source .profile
-mkdir -p ~/go/bin
-mkdir -p ~/go/src
+# source .profile
+# mkdir -p ~/go/bin
+# mkdir -p ~/go/src
 
 # python libs
 sudo pip3 install matplotlib numpy scipy
