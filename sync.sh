@@ -4,7 +4,7 @@ SCR=$HOME/Documents/scripts
 cd $HOME
 
 # replaces the files in HOME with (links to) the ones in this folder
-for NAME in ".profile" ".bash_aliases" ".vimrc" ".tmux.conf"; do
+for NAME in ".profile" ".bash_aliases" ".tmux.conf"; do
     mv $NAME $NAME.bak
     echo "Linking $SCR/$NAME to $(pwd)/$NAME"
     ln -s $SCR/$NAME ./$NAME
@@ -14,19 +14,22 @@ done
 mv .bashrc .bashrc.bak
 ln -s $SCR/$1/.bashrc ./.bashrc
 
+# neovim setup
+ln -s $SCR/.vimrc $(pwd)/.config/nvim/init.vim
+
 # sync the onedrive configs
-OD_DIR=$HOME/.config/onedrive
-mkdir -p $OD_DIR
-cd $OD_DIR
+# OD_DIR=$HOME/.config/onedrive
+# mkdir -p $OD_DIR
+# cd $OD_DIR
 
-mkdir -p uni
-mkdir -p personal
+# mkdir -p uni
+# mkdir -p personal
 
-for NAME in "starter" "uni/config" "personal/config"; do
-    rm -f $NAME
-    echo "Linking $SCR/onedrive/$NAME to $(pwd)/$NAME"
-    ln -s $SCR/onedrive/$NAME ./$NAME
-done
+#for NAME in "starter" "uni/config" "personal/config"; do
+#    rm -f $NAME
+#    echo "Linking $SCR/onedrive/$NAME to $(pwd)/$NAME"
+#    ln -s $SCR/onedrive/$NAME ./$NAME
+#done
 
 # sync the fusuma config
 FUSUMA_DIR=$HOME/.config/fusuma
