@@ -3,7 +3,7 @@
 # it assumes that your .profile has the GOPATH variable configured properly,
 # otherwise the `go get` command will fail.
 
-cd ~
+cd
 
 # absolutely necessary
 sudo apt install git -y
@@ -20,7 +20,7 @@ sudo apt install chromium-browser \
      qt5-style-kvantum qt5-style-kvantum-themes \
      zathura zathura-ps zathura-djvu pqiv nomacs ranger \
      speedcrunch onedrive rclone vlc clementine fonts-firacode \
-     evolution thunderbird pandoc mps-youtube thefuck kdocker -y
+     evolution thunderbird pandoc mps-youtube thefuck kdocker kio-gdrive -y
 # touchpad drivers
 sudo apt install xdotool libinput-tools ruby -y
 sudo apt install xserver-xorg-input-synaptics -y
