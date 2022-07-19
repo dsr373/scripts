@@ -12,7 +12,10 @@ done
 
 # distro specific .bashrc
 mv .bashrc .bashrc.bak
-ln -s $SCR/$1/.bashrc ./.bashrc
+ln -s $SCR/$1/.bashrc .bashrc
+
+# gitconfig
+cat "$SCR/.gitconfig" >> .gitconfig
 
 # neovim setup
 ln -s $SCR/.vimrc $(pwd)/.config/nvim/init.vim
