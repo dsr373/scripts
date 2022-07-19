@@ -54,3 +54,4 @@ export TERMCMD=konsole
 
 # set qt5 theme under something not KDE
 # export QT_STYLE_OVERRIDE=kvantum
+. "$HOME/.cargo/env"

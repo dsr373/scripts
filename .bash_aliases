@@ -1,10 +1,4 @@
 # some directory shortcuts
-alias gph="cd ~/OneDriveUni/Documents/Physics"
-alias gpr="cd ~/OneDriveUni/Documents/Proj"
-alias ggo="cd ~/go/src/github.com/dsr373"
-alias gcv="cd ~/OneDrivePers/Documents/CV/"
-alias gcr="cd ~/OneDriveUni/Documents/careers"
-alias gcomp="cd ~/OneDriveUni/Documents/Computing"
 alias gn="cd ~/Nextcloud/notes; source .cmds"
 
 # this checks if onedrive is working
@@ -40,14 +34,4 @@ alias vim="nvim"
 
 # clipboard
 alias clip="xclip -selection c"
-
-# create git aliases only when you need them
-function galias {
-    alias gs="git status"
-    alias ga="git add"
-    alias gc="git commit"
-    alias gp="git push"
-    alias gb="git branch"
-    alias gd="git diff"
-}
 

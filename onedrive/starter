@@ -1,5 +1,4 @@
 #!/bin/bash
 
 dir=~/.config/onedrive
-onedrive --monitor --confdir="$dir/uni" --enable-logging &
 onedrive --monitor --confdir="$dir/personal" --enable-logging &
