@@ -3,4 +3,9 @@
     ci = commit
     br = branch
     co = checkout
+    hist = log --graph --color --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %C(blue)%ae %C(bold blue)<%an>%Creset' --date=short
+    histall = log --graph --color --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %C(blue)%ae %C(bold blue)<%an>%Creset' --date=short --branches=* --remotes=*
+    ha = log --graph --color --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %C(blue)%ae %C(bold blue)<%an>%Creset' --date=short --branches=* --remotes=*
+    follow = log --follow -p --
+
 
