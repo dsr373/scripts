@@ -1,25 +1,14 @@
-# some directory shortcuts
-alias gn="cd ~/Nextcloud/notes; source .cmds"
-
-# this checks if onedrive is working
-alias odcheck="ps -fC onedrive"
-
 # this will check updates and list available updates
-alias upcheck="sudo apt update; printf '\n\n'; apt list --upgradeable"
+#alias upcheck="sudo apt update; printf '\n\n'; apt list --upgradeable"
+alias upcheck="dnf check-update"
 # this will update cache and upgrade everything (needs yes)
-alias upall="sudo apt update; printf '\n\n'; sudo apt full-upgrade"
-# arch shortcut
-# alias upall="yay -Syyu"
-alias rm-orphans="pacman -Qqtd | sudo pacman -Rns -"
+#alias upall="sudo apt update; printf '\n\n'; sudo apt full-upgrade"
+alias upall="sudo dnf upgrade"
 
 # prime switching
 alias psi="sudo prime-select intel"
 alias psn="sudo prime-select nvidia"
 alias psq="prime-select query"
-
-# alias psi="optimus-manager --switch intel"
-# alias psn="optimus-manager --switch nvidia"
-# alias psq="optimus-manager --status"
 
 # this restarts plasma
 alias replasma="plasmashell --replace &"
@@ -35,3 +24,4 @@ alias vim="nvim"
 # clipboard
 alias clip="xclip -selection c"
 
+alias geary="env GTK_THEME=Adwaita-dark geary"
