@@ -15,15 +15,15 @@ function odsync {
 }
 # }}}
 
-# =============== BBSWITCH ================ {{{
-function bboff {
-    sudo tee /proc/acpi/bbswitch <<<OFF
-}
+function ssh-forget {
+    if [ $# -ne 1 ] ; then
+        echo "Forgets an ssh host from known_hosts"
+        echo "Usage ssh-forget <hostname"
+        return 1
+    fi
 
-function bbon {
-    sudo tee /proc/acpi/bbswitch <<<ON
+    sed -i.bak "/^$1/d" ${HOME}/.ssh/known_hosts
 }
-# }}}
 
 function bat_pw {
     # read battery power consumption
