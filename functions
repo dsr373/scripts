@@ -77,6 +77,11 @@ function date2ts {
     echo "$ts * 1000" | bc
 }
 
+function c {
+    SCALE=5
+    echo "scale=$SCALE;" "$@" | bc -l
+}
+
 # =============== MUSIC STUFF ================ {{{
 function ytdl {
     # Options explanation:
