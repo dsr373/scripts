@@ -1,11 +1,24 @@
 [alias]
-    st = status
-    ci = commit
-    br = branch
     co = checkout
+    cm = commit
+    st = status
+    br = branch
+    bra = branch --all
+    sm = submodule
+    bl = blame -w -C -C -C
+    ds = diff --staged
     hist = log --graph --color --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %C(blue)%ae %C(bold blue)<%an>%Creset' --date=short
-    histall = log --graph --color --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %C(blue)%ae %C(bold blue)<%an>%Creset' --date=short --branches=* --remotes=*
     ha = log --graph --color --pretty=format:'%Cred%h%Creset %ad |%C(yellow)%d%Creset %s %C(blue)%ae %C(bold blue)<%an>%Creset' --date=short --branches=* --remotes=*
     follow = log --follow -p --
+    everything = !git log --graph --color --pretty=format:'%Cred%h%Creset %ad | %s %C(yellow)%d%Creset %C(blue)%ce %C(bold blue)<%an>%Creset' --date=short `git rev-list -g --all`
+    del-merged = !"git branch --merged | grep -vE 'main|master|\\*' | xargs -n 1 git branch -d"
 
+[pull]
+    rebase = false
+
+[diff]
+    tool = nvimdiff
+
+[push]
+    autoSetupRemote = true
 
