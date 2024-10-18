@@ -61,14 +61,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 PROMPT_DIRTRIM=3
-MY_PS='${debian_chroot:+($debian_chroot)}\
-\e[01;32m\]\u\
-\[\e[00m\]@\
-\[\e[01;33m\]\h \
-\[\e[01;34m\]\w\
-\[\e[01;35m\]$(gitbranch_ps1)\
-\[\e[00m\] \$ '
-
+MY_PS='\[\e[32;1m\]\u\[\e[0m\]@\[\e[33;1m\]\h\[\e[0m\] \[\e[34;1m\]\w\[\e[0m\]\[\e[35;1m\]$(gitbranch_ps1)\[\e[0m\] \\$ '
 
 if [ "$color_prompt" = yes ]; then
     PS1=$MY_PS
