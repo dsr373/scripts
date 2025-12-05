@@ -24,3 +24,6 @@
 [push]
     autoSetupRemote = true
 
+[user]
+	email = seremet.dan@gmail.com
+	name = Dan Seremet
