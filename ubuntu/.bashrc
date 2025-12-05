@@ -46,7 +46,7 @@ esac
 #force_color_prompt=yes
 
 function gitbranch_ps1 {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch --show-current 2>/dev/null | awk '{printf("(%s) ", $0)}'
 }
 
 if [ -n "$force_color_prompt" ]; then
@@ -130,6 +130,3 @@ if ! shopt -oq posix; then
 fi
 
 export QT_QPA_PLATFORMTHEME=gtk2
-
-# eval $(thefuck --alias)
-. "$HOME/.cargo/env"

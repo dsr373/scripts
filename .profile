@@ -45,13 +45,12 @@ if [ -d "$HOME/go" ]; then
     export GOPATH="$HOME/go"
 fi
 
-if [ -d "$HOME/Documents/scripts" ]; then
-    export scripts="$HOME/Documents/scripts"
+if [ -d "$HOME/dev/scripts" ]; then
+    export scripts="$HOME/dev/scripts"
 fi
-
-# set TERMCMD
-export TERMCMD=konsole
 
 # set qt5 theme under something not KDE
 # export QT_STYLE_OVERRIDE=kvantum
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ] ; then
+    source "$HOME/.cargo/env"
+fi
